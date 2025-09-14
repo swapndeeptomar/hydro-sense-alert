@@ -334,22 +334,10 @@ const AdminReports = () => {
               </SelectContent>
             </Select>
             
-            <Popover>
-              <PopoverTrigger asChild>
-                <Button variant="outline" className="justify-start text-left font-normal">
-                  <CalendarIcon className="mr-2 h-4 w-4" />
-                  Date Range
-                </Button>
-              </PopoverTrigger>
-              <PopoverContent className="w-auto p-0" align="start">
-                <Calendar
-                  mode="range"
-                  selected={dateRange}
-                  onSelect={setDateRange}
-                  numberOfMonths={2}
-                />
-              </PopoverContent>
-            </Popover>
+            <Button variant="outline" className="justify-start text-left font-normal" disabled>
+              <CalendarIcon className="mr-2 h-4 w-4" />
+              Date Range (Coming Soon)
+            </Button>
           </div>
         </CardContent>
       </Card>

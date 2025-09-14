@@ -556,7 +556,7 @@ const DeviceDetailModal = ({ device }) => {
       <div>
         <h4 className="font-semibold text-foreground mb-3">Sensor Readings</h4>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {Object.entries(device.sensors).map(([key, sensor]) => (
+          {Object.entries(device.sensors).map(([key, sensor]: [string, any]) => (
             <Card key={key} className="border">
               <CardContent className="p-4 text-center">
                 <div className="mb-2">
@@ -566,14 +566,14 @@ const DeviceDetailModal = ({ device }) => {
                   {key === "chlorine" && <Cpu className="h-6 w-6 mx-auto text-green-600" />}
                 </div>
                 <div className="text-lg font-bold text-foreground">
-                  {sensor.value !== null ? `${sensor.value} ${sensor.unit}` : "No Data"}
+                  {sensor?.value !== null ? `${sensor?.value} ${sensor?.unit}` : "No Data"}
                 </div>
                 <div className="text-sm text-muted-foreground capitalize">{key}</div>
                 <Badge 
                   variant="outline" 
-                  className={`text-xs mt-1 ${getSensorStatus(sensor.status)}`}
+                  className={`text-xs mt-1 ${getSensorStatus(sensor?.status || "No Data")}`}
                 >
-                  {sensor.status}
+                  {sensor?.status || "No Data"}
                 </Badge>
               </CardContent>
             </Card>

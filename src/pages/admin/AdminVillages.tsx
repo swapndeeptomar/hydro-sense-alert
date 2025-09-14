@@ -223,11 +223,16 @@ const AdminVillages = () => {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-3xl font-bold text-foreground">Village Management</h1>
+          <p className="text-lg text-muted-foreground">गांव प्रबंधन</p>
           <p className="text-muted-foreground">Monitor village health status and manage interventions</p>
+          <p className="text-sm text-muted-foreground/80">गांव की स्वास्थ्य स्थिति की निगरानी करें और हस्तक्षेप का प्रबंधन करें</p>
         </div>
         <Button>
           <MapPin className="h-4 w-4 mr-2" />
-          Add Village
+          <div className="text-center">
+            <div>Add Village</div>
+            <div className="text-xs opacity-80">गांव जोड़ें</div>
+          </div>
         </Button>
       </div>
 
@@ -238,6 +243,7 @@ const AdminVillages = () => {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-muted-foreground">Total Population</p>
+                <p className="text-xs text-muted-foreground/70">कुल जनसंख्या</p>
                 <p className="text-2xl font-bold text-foreground">{totalStats.totalPopulation.toLocaleString()}</p>
               </div>
               <Users className="h-8 w-8 text-blue-600" />
@@ -250,6 +256,7 @@ const AdminVillages = () => {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-muted-foreground">Active Cases</p>
+                <p className="text-xs text-muted-foreground/70">सक्रिय मामले</p>
                 <p className="text-2xl font-bold text-foreground">{totalStats.totalCases}</p>
               </div>
               <AlertTriangle className="h-8 w-8 text-red-600" />
@@ -300,7 +307,7 @@ const AdminVillages = () => {
           <div className="relative">
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder="Search villages by name or district..."
+              placeholder="Search villages by name or district... (नाम या जिले से खोजें...)"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="pl-10"

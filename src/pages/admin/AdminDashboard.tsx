@@ -49,6 +49,7 @@ const AdminDashboard = () => {
   const menuItems = [
     { title: "Overview", url: "/admin", icon: LayoutDashboard },
     { title: "Alerts", url: "/admin/alerts", icon: AlertTriangle },
+    { title: "All Villages", url: "/admin/all-villages", icon: MapPin },
     { title: "Villages", url: "/admin/villages", icon: MapPin },
     { title: "Reports", url: "/admin/reports", icon: FileText },
     { title: "Devices", url: "/admin/devices", icon: Cpu },

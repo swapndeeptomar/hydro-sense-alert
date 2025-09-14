@@ -115,7 +115,7 @@ const LandingPage = () => {
       </nav>
 
       {/* Hero Section */}
-      <section className="hero-section">
+      <section className="hero-section pt-20">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
@@ -126,48 +126,81 @@ const LandingPage = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-accent/80" />
         
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <Badge variant="secondary" className="mb-6 bg-white/20 text-white border-white/30">
+          <Badge variant="secondary" className="mb-6 bg-white/20 text-white border-white/30 animate-fade-in">
             🚀 AI-Powered Disease Prevention
+            <br />
+            <span className="text-xs">🚀 एआई-संचालित रोग रोकथाम</span>
           </Badge>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 leading-tight animate-fade-in">
             Fighting Waterborne 
             <br />
             <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
               Diseases with Data & AI
             </span>
           </h1>
+          <h2 className="text-2xl md:text-3xl font-bold mb-8 leading-tight text-white/80 animate-fade-in">
+            डेटा और एआई के साथ जलजनित रोगों से लड़ाई
+          </h2>
           
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Protecting communities through real-time water quality monitoring, 
-            AI-powered risk prediction, and early warning systems.
+          <p className="text-xl md:text-2xl mb-4 text-white/90 max-w-4xl mx-auto leading-relaxed animate-fade-in">
+            This platform uses AI models to analyze water quality and health reports, predict risks, and send early alerts to communities through real-time monitoring and intelligent prediction systems.
+          </p>
+          <p className="text-lg md:text-xl mb-8 text-white/80 max-w-4xl mx-auto leading-relaxed animate-fade-in">
+            यह प्लेटफॉर्म पानी की गुणवत्ता और स्वास्थ्य रिपोर्ट का विश्लेषण करने, जोखिमों की भविष्यवाणी करने और समुदायों को शीघ्र चेतावनी भेजने के लिए एआई मॉडल का उपयोग करता है।
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Button 
               size="lg" 
-              className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-4"
+              className="bg-white text-primary hover:bg-white/90 text-lg px-8 py-4 animate-fade-in hover-scale"
               onClick={() => navigate('/citizen')}
             >
-              Access Citizen Portal
+              <div className="text-center">
+                <div>Access Citizen Portal</div>
+                <div className="text-sm opacity-80">नागरिक पोर्टल</div>
+              </div>
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="border-white text-white hover:bg-white/10 text-lg px-8 py-4"
+              className="border-white text-white hover:bg-white/10 text-lg px-8 py-4 animate-fade-in hover-scale"
               onClick={() => navigate('/admin')}
             >
-              Admin Dashboard
+              <div className="text-center">
+                <div>Admin Dashboard</div>
+                <div className="text-sm opacity-80">प्रशासक डैशबोर्ड</div>
+              </div>
             </Button>
+          </div>
+
+          {/* Process Animation */}
+          <div className="flex justify-center items-center gap-8 mb-12 animate-fade-in">
+            {workflowSteps.map((step, index) => (
+              <div key={index} className="flex items-center">
+                <div className="w-16 h-16 gradient-primary rounded-full flex items-center justify-center animate-pulse">
+                  <step.icon className="h-8 w-8 text-white" />
+                </div>
+                {index < workflowSteps.length - 1 && (
+                  <div className="w-8 h-0.5 bg-white/50 mx-4 animate-fade-in" />
+                )}
+              </div>
+            ))}
           </div>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center animate-fade-in hover-scale">
                 <stat.icon className="h-8 w-8 text-white mx-auto mb-2" />
                 <div className="text-3xl font-bold text-white">{stat.value}</div>
-                <div className="text-white/80">{stat.label}</div>
+                <div className="text-white/80 text-sm">{stat.label}</div>
+                <div className="text-white/60 text-xs mt-1">
+                  {index === 0 && "संरक्षित गांव"}
+                  {index === 1 && "भेजी गई चेतावनी"}
+                  {index === 2 && "रोके गए मामले"}
+                  {index === 3 && "जुड़े नागरिक"}
+                </div>
               </div>
             ))}
           </div>
@@ -177,21 +210,35 @@ const LandingPage = () => {
       {/* About Section */}
       <section id="about" className="py-20 bg-secondary/30">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl font-bold text-foreground mb-2">
               Understanding Waterborne Diseases
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h3 className="text-2xl font-semibold text-muted-foreground mb-4">
+              जलजनित रोगों को समझना
+            </h3>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-2">
               Learn about the most common waterborne diseases and their impact on communities worldwide.
+            </p>
+            <p className="text-lg text-muted-foreground/80 max-w-3xl mx-auto">
+              सबसे आम जलजनित रोगों और दुनिया भर के समुदायों पर उनके प्रभाव के बारे में जानें।
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {aboutCards.map((disease, index) => (
-              <Card key={index} className="card-interactive">
+              <Card key={index} className="card-interactive animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardContent className="p-6">
                   <div className="flex justify-between items-start mb-4">
-                    <h3 className="text-lg font-semibold text-foreground">{disease.title}</h3>
+                    <div>
+                      <h3 className="text-lg font-semibold text-foreground">{disease.title}</h3>
+                      <h4 className="text-sm text-muted-foreground">
+                        {index === 0 && "हैजा"}
+                        {index === 1 && "टाइफाइड"}
+                        {index === 2 && "हेपेटाइटिस ए"}
+                        {index === 3 && "दस्त संबंधी रोग"}
+                      </h4>
+                    </div>
                     <Badge 
                       variant={disease.severity === 'High' ? 'destructive' : 'secondary'}
                       className="text-xs"
@@ -203,7 +250,9 @@ const LandingPage = () => {
                     {disease.description}
                   </p>
                   <div>
-                    <h4 className="font-medium text-foreground mb-2 text-sm">Symptoms:</h4>
+                    <h4 className="font-medium text-foreground mb-2 text-sm">
+                      Symptoms: <span className="text-xs text-muted-foreground">लक्षण:</span>
+                    </h4>
                     <ul className="space-y-1">
                       {disease.symptoms.map((symptom, i) => (
                         <li key={i} className="text-xs text-muted-foreground flex items-center">
@@ -223,24 +272,33 @@ const LandingPage = () => {
       {/* Prevention Tips */}
       <section id="prevention" className="py-20">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl font-bold text-foreground mb-2">
               Prevention Guidelines
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h3 className="text-2xl font-semibold text-muted-foreground mb-4">
+              रोकथाम दिशानिर्देश
+            </h3>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-2">
               Simple yet effective practices to protect yourself and your community from waterborne diseases.
+            </p>
+            <p className="text-lg text-muted-foreground/80 max-w-3xl mx-auto">
+              जलजनित रोगों से अपने और अपने समुदाय की सुरक्षा के लिए सरल लेकिन प्रभावी उपाय।
             </p>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
             {/* Do's */}
-            <Card className="card-elevated">
+            <Card className="card-elevated animate-fade-in hover-scale">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-success rounded-full flex items-center justify-center mr-4">
                     <Shield className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-success">Do's</h3>
+                  <div>
+                    <h3 className="text-2xl font-bold text-success">Do's</h3>
+                    <p className="text-lg text-success/80">करें</p>
+                  </div>
                 </div>
                 <ul className="space-y-4">
                   {preventionTips.dos.map((tip, index) => (
@@ -254,13 +312,16 @@ const LandingPage = () => {
             </Card>
 
             {/* Don'ts */}
-            <Card className="card-elevated">
+            <Card className="card-elevated animate-fade-in hover-scale">
               <CardContent className="p-8">
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-danger rounded-full flex items-center justify-center mr-4">
                     <AlertTriangle className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-danger">Don'ts</h3>
+                  <div>
+                    <h3 className="text-2xl font-bold text-danger">Don'ts</h3>
+                    <p className="text-lg text-danger/80">न करें</p>
+                  </div>
                 </div>
                 <ul className="space-y-4">
                   {preventionTips.donts.map((tip, index) => (
@@ -279,18 +340,24 @@ const LandingPage = () => {
       {/* System Workflow */}
       <section id="system" className="py-20 bg-secondary/30">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl font-bold text-foreground mb-2">
               How Our System Works
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <h3 className="text-2xl font-semibold text-muted-foreground mb-4">
+              हमारा सिस्टम कैसे काम करता है
+            </h3>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-2">
               A three-step approach to preventing waterborne disease outbreaks through technology and data.
+            </p>
+            <p className="text-lg text-muted-foreground/80 max-w-3xl mx-auto">
+              प्रौद्योगिकी और डेटा के माध्यम से जलजनित रोग के प्रकोप को रोकने के लिए एक तीन-चरणीय दृष्टिकोण।
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {workflowSteps.map((step, index) => (
-              <div key={index} className="text-center">
+              <div key={index} className="text-center animate-fade-in hover-scale" style={{ animationDelay: `${index * 0.2}s` }}>
                 <div className="relative mb-8">
                   <div className="w-20 h-20 gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 shadow-elevated">
                     <step.icon className="h-10 w-10 text-white" />
@@ -302,7 +369,12 @@ const LandingPage = () => {
                     <div className="hidden md:block absolute top-10 left-full w-full h-0.5 bg-gradient-to-r from-primary to-accent" />
                   )}
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">{step.title}</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-2">{step.title}</h3>
+                <h4 className="text-lg font-semibold text-muted-foreground mb-4">
+                  {index === 0 && "एकत्र करें"}
+                  {index === 1 && "भविष्यवाणी करें"}
+                  {index === 2 && "रोकें"}
+                </h4>
                 <p className="text-muted-foreground leading-relaxed">{step.description}</p>
               </div>
             ))}

@@ -13,6 +13,7 @@ import TreatmentDoctors from "./pages/citizen/TreatmentDoctors";
 import AdminDashboard from "./pages/admin/AdminDashboard";
 import AdminOverview from "./pages/admin/AdminOverview";
 import AdminAlerts from "./pages/admin/AdminAlerts";
+import AdminAllVillages from "./pages/admin/AdminAllVillages";
 import AdminVillages from "./pages/admin/AdminVillages";
 import AdminReports from "./pages/admin/AdminReports";
 import AdminDevices from "./pages/admin/AdminDevices";
@@ -41,6 +42,7 @@ const App = () => (
           <Route path="/admin" element={<AdminDashboard />}>
             <Route index element={<AdminOverview />} />
             <Route path="alerts" element={<AdminAlerts />} />
+            <Route path="all-villages" element={<AdminAllVillages />} />
             <Route path="villages" element={<AdminVillages />} />
             <Route path="reports" element={<AdminReports />} />
             <Route path="devices" element={<AdminDevices />} />

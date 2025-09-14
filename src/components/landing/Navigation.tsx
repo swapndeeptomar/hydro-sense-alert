@@ -47,7 +47,7 @@ const Navigation = () => {
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
       isScrolled 
         ? 'bg-background/95 backdrop-blur-xl shadow-soft border-b border-border/50' 
-        : 'bg-transparent'
+        : 'bg-background/95 backdrop-blur-xl'
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
@@ -58,9 +58,9 @@ const Navigation = () => {
             </div>
             <div>
               <span className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
-                AquaGuard
+                HydroSense
               </span>
-              <div className="text-xs text-muted-foreground">एक्वागार्ड</div>
+              <div className="text-xs text-muted-foreground">हाइड्रोसेंस</div>
             </div>
           </div>
 

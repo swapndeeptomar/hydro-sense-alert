@@ -76,7 +76,7 @@ const AdminDashboard = () => {
                 <SidebarTrigger className="lg:hidden" />
                 <div className="hidden sm:flex items-center space-x-2">
                   <Droplets className="h-6 w-6 text-primary" />
-                  <span className="text-lg font-semibold text-foreground">AquaGuard Admin</span>
+                  <span className="text-lg font-semibold text-foreground">HydroSense Admin</span>
                 </div>
               </div>
 
@@ -118,7 +118,7 @@ const AdminDashboard = () => {
                       <div className="flex flex-col space-y-1">
                         <p className="text-sm font-medium leading-none">Admin User</p>
                         <p className="text-xs leading-none text-muted-foreground">
-                          admin@aquaguard.org
+                          admin@HydroSense.org
                         </p>
                       </div>
                     </DropdownMenuLabel>

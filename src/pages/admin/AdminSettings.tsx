@@ -45,7 +45,7 @@ const AdminSettings = () => {
     {
       id: 1,
       name: "Dr. Sarah Chen",
-      email: "sarah.chen@aquaguard.org",
+      email: "sarah.chen@HydroSense.org",
       role: "Health Administrator",
       phone: "+1-555-0123",
       village: "Lake Shore",
@@ -56,7 +56,7 @@ const AdminSettings = () => {
     {
       id: 2,
       name: "Ahmed Rahman",
-      email: "ahmed.rahman@aquaguard.org",
+      email: "ahmed.rahman@HydroSense.org",
       role: "Disease Specialist",
       phone: "+1-555-0124",
       village: "Multiple",
@@ -67,7 +67,7 @@ const AdminSettings = () => {
     {
       id: 3,
       name: "Tech Support Team",
-      email: "tech@aquaguard.org",
+      email: "tech@HydroSense.org",
       role: "System Administrator",
       phone: "+1-555-0125",
       village: "All",

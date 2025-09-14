@@ -41,8 +41,8 @@ const Footer = () => {
                 <Droplets className="h-7 w-7 text-white" />
               </div>
               <div>
-                <span className="text-2xl font-bold">AquaGuard</span>
-                <div className="text-sm text-gray-300">एक्वागार्ड</div>
+                <span className="text-2xl font-bold">HydroSense</span>
+                <div className="text-sm text-gray-300">हाइड्रोसेंस</div>
               </div>
             </div>
             
@@ -129,7 +129,7 @@ const Footer = () => {
               </h5>
               <div className="space-y-2 text-sm text-gray-300">
                 <p>📞 Hotline: 1-800-AQUA-911</p>
-                <p>📧 info@aquaguard.org</p>
+                <p>📧 info@HydroSense.org</p>
                 <p>🕒 24/7 Monitoring Center</p>
                 <p className="text-xs text-gray-400">24/7 निगरानी केंद्र</p>
               </div>
@@ -142,7 +142,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-center md:text-left">
               <p className="text-gray-300">
-                &copy; 2024 AquaGuard. All rights reserved. Built for community health and safety.
+                &copy; 2024 HydroSense. All rights reserved. Built for community health and safety.
               </p>
               <p className="text-sm text-gray-400 mt-1">
                 समुदायिक स्वास्थ्य और सुरक्षा के लिए निर्मित। सभी अधिकार सुरक्षित।

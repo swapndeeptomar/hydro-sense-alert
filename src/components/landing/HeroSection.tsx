@@ -72,7 +72,7 @@ const HeroSection = () => {
         ))}
       </div>
       
-      <div className="relative z-10 container mx-auto px-6 text-center py-20">
+      <div className="relative z-10 container mx-auto px-6 text-center pt-8 pb-20">
         {/* Animated Badge */}
         <Badge 
           variant="secondary" 
@@ -124,7 +124,7 @@ const HeroSection = () => {
           <Button 
             size="lg" 
             variant="outline" 
-            className="group border-2 border-white text-white hover:bg-white/10 text-lg px-10 py-6 rounded-2xl backdrop-blur-sm transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+            className="group bg-white text-primary hover:bg-white/95 text-lg px-10 py-6 rounded-2xl shadow-2xl hover:shadow-white/25 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
             onClick={() => navigate('/admin')}
           >
             <div className="text-center">

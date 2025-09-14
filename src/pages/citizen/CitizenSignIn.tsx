@@ -64,7 +64,7 @@ const CitizenSignIn = () => {
           
           <div className="flex items-center justify-center space-x-2 mb-4">
             <Droplets className="h-10 w-10 text-primary" />
-            <span className="text-2xl font-bold text-foreground">AquaGuard</span>
+            <span className="text-2xl font-bold text-foreground">HydroSense</span>
           </div>
           <h1 className="text-4xl font-bold text-foreground mb-2">Citizen Portal</h1>
           <p className="text-xl text-muted-foreground">
